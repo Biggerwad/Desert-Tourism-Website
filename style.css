@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(.//images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    padding: 0 3px;
+}
+
+/* Making line appear on hover */
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    background-color: pink;
+    transition: 0.5s;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+
+.logo {
+    width: 50px;
+    cursor: pointer
+}
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+    display: none;
+}
+
+nav {
+    /* flex:1; */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.cols {
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+h1 {
+    color: #fff;
+    font-size: 100px;
+}
+
+p {
+    color: #fff;
+    line-height: 18px;
+    font-size: 15px;
+}
+
+button {
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(./images/pic-1.png);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5;
+}
+
+.card1 {
+    background-image: url(./images/pic-2.png);
+}
+
+.card2 {
+    background-image: url(./images/pic-3.png);
+}
+
+.card3 {
+    background-image: url(./images/pic-4.png);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h5 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+
+.card p {
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
+}
+
+/* MAKING IT RESPONSIVE*/
+
+@media (max-width:834px) {
+
+    .col {
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    .cols {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .container {
+        display: block;
+        position: absolute;
+        background-size: cover;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .col {
+        /* width: 100vw; */
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .col h1 {
+        font-size: 5rem;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    .cols {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .container {
+        display: block;
+        position: absolute;
+        background-size: cover;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
